@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+/* This is a CSS comment. Your style goes below here. */
+ body{
+  background-color: #FFE4C4;
+  margin: 40px;
+ }
+ section{
+  background-color: #FFF8DC;
+  padding: 20px;
+ }
+ h1, footer{
+  text-align: center;
+ }
+ footer{
+  margin-top: 20px;
+ }
+ a:link, a:visited{
+  color: #000;
+  text-decoration: none;
+ }
+ b{
+  color: #800000;
+ }
+ strong{
+  color: #D2691E;
+ }
+ em, i, code, kbd, sup, sub{
+  color: #808;
+ }
+ q{
+  font-weight: bold;
+ }
+ .green{
+  color: #094;
+ }
+</style>
+</head>
+
+<body>
+
+</body>
+
+<footer style="text-align: center;">
+<a href="http://validator.w3.org/check/referer">
+<strong> HTML </strong> Valid! </a>
+<a href ="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">
+<strong> CSS </strong> Valid! </a>
+</footer>`
+
+</html>
