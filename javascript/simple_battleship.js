@@ -5,7 +5,6 @@ var location3 = 5;
 var guess;
 var hits = 0;
 var guesses = 0;
-var guessed = [];
 
 var isSunk = false;
 
@@ -17,7 +16,6 @@ while (isSunk == false) {
  else{
    guesses = guesses + 1;
  
-   //guessed[guessed.length] = guess;
    if(guess == location1 || guess == location2 || guess == location3){
      hits = hits + 1;
      alert("Hit!");
@@ -31,6 +29,6 @@ while (isSunk == false) {
    }
  }
 }
-   var stats = "You took " + guesses + " guesses to sink the battleship, " + 
-               "which means your accuracy was " + (3/guesses)*100 + "%";
-   alert(stats);  
+var stats = "You took " + guesses + " guesses to sink the battleship, " + 
+            "which means your accuracy was " + (3/guesses)*100 + "%";
+alert(stats);  
