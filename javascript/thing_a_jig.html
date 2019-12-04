@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Thing-A-Ma-Jig</title>
+<style>
+
+</style>
+</head>
+
+<body>
+ <h1>The Thing-a-ma-Jig</h1>
+ <h2>Check console!</h2>
+ 
+ <script>
+   function clunk(times){
+     var num = times;
+     while(num>0){
+       display("clunk");
+       num = num - 1;
+     }
+   }
+   
+   function thingamajig(size){
+     var facky = 1;
+     clunckCounter = 0;
+     if(size == 0){
+       display("clank");
+     } else if (size == 1){
+       display("thunk");
+     } else {
+       while (size>1) {
+         facky = facky*size;
+         size = size - 1;
+       }
+       clunk(facky);
+     }
+   }
+
+   function display(output){
+     console.log(output);
+     clunkCounter = clunkCounter + 1;
+   }
+   var clunkCounter = 0;
+   thingamajig(5);
+   console.log(clunkCounter);
+
+ </script>
+
+</body>
+
+<footer style="text-align: center;">
+<a href="http://validator.w3.org/check?uri=https://quartezy.github.io/itd110/javascript/thing_a_jig.html">
+<strong> HTML </strong> Valid! </a>
+<a href ="http://jigsaw.w3.org/css-validator/validator?uri=https://quartezy.github.io/itd110/javascript/thing_a_jig.html?profile=css3">
+<strong> CSS </strong> Valid! </a>
+</footer>`
+
+</html>
