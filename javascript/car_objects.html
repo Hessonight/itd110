@@ -21,19 +21,33 @@
      passengers: 2,
      convertible: false,
      mileage: 1021,
+     fuel: 0,
      started: false,
      start: function(){
-       this.started = true;
+       if(this.fuel==0){
+         alert("Out of gas");
+       } else {
+         this.started = true;
+       }
      },
      stop: function(){
        this.started = false;
      },
      drive: function() {
        if(this.started){
-         alert(this.make+ " "+ this.model + " goes zoom zoom");
-       } else {
+         if(this.fuel>0){
+           alert(this.make+ " "+ this.model + " goes zoom zoom");
+           this.fuel = this.fuel - 1;
+         } else {
+           alert("Out of fuel");
+           this.stop();
+         }
+        } else {
          alert("You need to start the car");
        }
+     },
+     addFuel: function(amount){
+       this.fuel = this.fuel +amount;
      } 
    };
    var cadi = {
@@ -44,19 +58,33 @@
      passengers: 5,
      convertible: false,
      mileage: 12892,
+     fuel: 0,
      started: false,
      start: function(){
-       this.started = true;
+       if(this.fuel==0){
+         alert("Out of gas");
+       }else {
+         this.started = true;
+       }
      },
      stop: function(){
        this.started = false;
      },
      drive: function() {
        if(this.started){
-         alert(this.make+ " "+ this.model + " goes zoom zoom");
+         if(this.fuel>0){
+           alert(this.make+ " "+ this.model + " goes zoom zoom");
+           this.fuel = this.fuel - 1;
+         } else {
+           alert("Out of fuel");
+           this.stop();
+         }
        } else {
          alert("You need to start the car");
        }
+     },
+     addFuel: function(amount){
+       this.fuel = this.fuel +amount;
      }
    };
    var fiat = {
@@ -67,19 +95,33 @@
      passengers: 2,
      convertible: false,
      mileage: 8800,
+     fuel: 0,
      started: false,
      start: function(){
-       this.started = true;
+       if(this.fuel==0){
+         alert("Out of fuel");
+       }else {
+         this.started = true;
+       }
      },
      stop: function(){
        this.started = false;
      },
      drive: function() {
        if(this.started){
-         alert(this.make+ " "+ this.model + " goes zoom zoom");
+         if(this.fuel>0){
+           alert(this.make+ " "+ this.model + " goes zoom zoom");
+           this.fuel = this.fuel - 1;
+         } else {
+           alert("Out of fuel");
+           this.stop();
+         }
        } else {
          alert("You need to start the car");
        }
+     },
+     addFuel: function(amount){
+       this.fuel = this.fuel +amount;
      }
    };
    var taxi = {
@@ -90,19 +132,33 @@
      passengers: 4,
      convertible: false,
      mileage: 281341,
+     fuel: 0,
      started: false,
      start: function(){
-       this.started = true;
+       if(this.fuel==0){
+         alert("Out of fuel");
+       }else {
+         this.started = true;
+       }
      },
      stop: function(){
        this.started = false;
      },
      drive: function() {
        if(this.started){
-         alert(this.make+ " "+ this.model + " goes zoom zoom");
+         if(this.fuel>0){
+           alert(this.make+ " "+ this.model + " goes zoom zoom");
+           this.fuel = this.fuel - 1;
+         } else {
+           alert("Out of fuel");
+           this.stop();
+         }
        } else {
          alert("You need to start the car");
        }
+     },
+     addFuel: function(amount){
+       this.fuel = this.fuel +amount;
      }
    };
    function prequal(car){
@@ -118,8 +174,9 @@
    }
    function check(car){
      console.log("Check out the " + car.make + " " + car.model);
-     car.drive();
+     car.addFuel(2);
      car.start();
+     car.drive();
      car.drive();
      car.stop();
    }
