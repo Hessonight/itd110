@@ -20,7 +20,21 @@
      color: "red",
      passengers: 2,
      convertible: false,
-     mileage: 1021 
+     mileage: 1021,
+     started: false,
+     start: function(){
+       this.started = true;
+     },
+     stop: function(){
+       this.started = false;
+     },
+     drive: function() {
+       if(this.started){
+         alert(this.make+ " "+ this.model + " goes zoom zoom");
+       } else {
+         alert("You need to start the car");
+       }
+     } 
    };
    var cadi = {
      make: "General Motors",
@@ -29,7 +43,21 @@
      color: "tan",
      passengers: 5,
      convertible: false,
-     mileage: 12892
+     mileage: 12892,
+     started: false,
+     start: function(){
+       this.started = true;
+     },
+     stop: function(){
+       this.started = false;
+     },
+     drive: function() {
+       if(this.started){
+         alert(this.make+ " "+ this.model + " goes zoom zoom");
+       } else {
+         alert("You need to start the car");
+       }
+     }
    };
    var fiat = {
      make: "Fiat",
@@ -38,17 +66,17 @@
      color: "Medium Blue", 
      passengers: 2,
      convertible: false,
-     mileage: 88000
+     mileage: 8800,
      started: false,
      start: function(){
        this.started = true;
-     }
+     },
      stop: function(){
        this.started = false;
-     }
+     },
      drive: function() {
        if(this.started){
-         alert("zoom zoom");
+         alert(this.make+ " "+ this.model + " goes zoom zoom");
        } else {
          alert("You need to start the car");
        }
@@ -61,7 +89,21 @@
      color: "yellow",
      passengers: 4,
      convertible: false,
-     mileage: 281341
+     mileage: 281341,
+     started: false,
+     start: function(){
+       this.started = true;
+     },
+     stop: function(){
+       this.started = false;
+     },
+     drive: function() {
+       if(this.started){
+         alert(this.make+ " "+ this.model + " goes zoom zoom");
+       } else {
+         alert("You need to start the car");
+       }
+     }
    };
    function prequal(car){
      if(car.mileage > 10000){
@@ -76,6 +118,10 @@
    }
    function check(car){
      console.log("Check out the " + car.make + " " + car.model);
+     car.drive();
+     car.start();
+     car.drive();
+     car.stop();
    }
    var worthALook = prequal(taxi);
    if(worthALook){
@@ -98,10 +144,6 @@
    } else {
      pass(chevy);
    }
-   fiat.drive();
-   fiat.start();
-   fiat.drive();
-   fiat.stop();
  </script>
 </body>
 
