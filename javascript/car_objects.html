@@ -39,6 +39,20 @@
      passengers: 2,
      convertible: false,
      mileage: 88000
+     started: false,
+     start: function(){
+       this.started = true;
+     }
+     stop: function(){
+       this.started = false;
+     }
+     drive: function() {
+       if(this.started){
+         alert("zoom zoom");
+       } else {
+         alert("You need to start the car");
+       }
+     }
    };
    var taxi = {
      make: "Webville Motors",
@@ -84,6 +98,10 @@
    } else {
      pass(chevy);
    }
+   fiat.drive();
+   fiat.start();
+   fiat.drive();
+   fiat.stop();
  </script>
 </body>
 
