@@ -18,7 +18,7 @@ a:link, a:visited {
 a:hover{
  font-size: 110%;
 }
-.scheme {
+h1, ul, footer {
  margin: 20px;
  padding: 10px;
  color: #31393C;
