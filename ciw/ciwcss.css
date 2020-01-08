@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Monoton|Montserrat&display=swap');
 body{
- background-color:#33A1FD;
+ background-color:#FD837B;
 }
 h1{
  text-align:center;
@@ -22,7 +22,7 @@ h1, ul, footer {
  margin: 20px;
  padding: 10px;
  color: #31393C;
- background-color: #FDCA40;
+ background-color:#FDCA40;
  border:1px solid #F79824;
  border-radius: 15px;
 }
