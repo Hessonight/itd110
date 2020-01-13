@@ -8,13 +8,13 @@
 }
 
 :root{
-  --page-width: 8.5in;
-  --page-height: 11in;
-  --main-width: 6.4in;
+  --page-width: 816px;
+  --page-height: 1056px;
+  --main-width: 614px;
   --sidebar-width: calc(var(--page-width) - var(--main-width));
-  --decorator-horizontal-margin: 0.2in;
+  --decorator-horizontal-margin: 19px;
 
-  --sidebar-horizontal-padding: 0.2in;
+  --sidebar-horizontal-padding: 19px;
 
   /* XXX: using px for very good precision control */
   --decorator-outer-offset-top: 10px;
