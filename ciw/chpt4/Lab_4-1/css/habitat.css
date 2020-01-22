@@ -81,7 +81,7 @@ transform: rotate(345deg);
 
 #logo-rotate {
 -webkit-transform: rotateY(180deg);
-transform: rotateY (180deg);
+transform: rotateY(180deg);
 }
 
 #video-rotate {
