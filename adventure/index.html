@@ -2,12 +2,79 @@
 <html lang ="en">
 <head>
 <meta charset="utf-8">
-<title></title>
+<title>Choose Your Own Adventure!</title>
 <style>
+.collapsible {
+  padding:20px;
+  width:100%;
+  font-size:20px;
+  background-color: #546A7B;
+  color: #FFF;
+  text-align:left;
+  cursor: pointer;
+  content: &#9432;
+}
+
+.active, .collapsible:hover {
+  background-color: #4C5F6B;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: #FFF;
+  font-weight: bold;
+  float: left;
+  margin-right: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 20px;
+  overflow: hidden;
+  background-color: #F1F1F1;
+  color: #000;
+  display: none;
+}
+
+.tip {
+  position: relative;
+  float: right;
+  display: inline-block;
+}
+
+.tip .tiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #333;
+  color: #FFF;
+  text-align:center;
+  padding: 5px 0;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 110%;
+}
+
+.tip:hover .tiptext{
+  visibility: visible;
+}
 
 </style>
 </head>
 <body>
+
+<button type="button" class="collapsible">Start Your Adventure
+  <div class="tip">&#9432;
+    <span class="tiptext">Tester</span>
+  </div>
+</button>
+<div class="content">
+ <p>Yay!</p>
+</div>
 
 <footer style="text-align: center;" class="center">
 <a href="http://validator.w3.org/check?uri=https://quartezy.github.io/itd110/adventure/">
@@ -15,6 +82,24 @@
 <a href ="http://jigsaw.w3.org/css-validator/validator?uri=https://quartezy.github.io/itd110/adventure/?profile=css3">
 <strong> CSS </strong> Valid! </a>
 </footer>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
 </body>
 </html>
 
