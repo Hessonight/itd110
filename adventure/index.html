@@ -33,10 +33,12 @@
 
 .content {
   padding: 0 20px;
+  padding-right:0px;
   overflow: hidden;
   background-color: #F1F1F1;
   color: #000;
-  display: none;
+  display: none;;
+  border-left: 1px solid #546A7B;
 }
 
 .tip {
@@ -69,11 +71,29 @@
 
 <button type="button" class="collapsible">Start Your Adventure
   <div class="tip">&#9432;
-    <span class="tiptext">Tester</span>
+    <span class="tiptext">Begin your Adventure</span>
   </div>
 </button>
 <div class="content">
- <p>Yay!</p>
+ 
+ <button type="button" class="collapsible">Zombie Apocalypse
+  <div class="tip">&#9432;
+    <span class="tiptext">The Zombies are coming! What do you do?</span>
+  </div>
+  </button>
+  <div class="content">
+    
+    <button type="button" class="collapsible">Start Your Adventure
+     <div class="tip">&#9432;
+      <span class="tiptext">Tester</span>
+     </div>
+    </button>
+    <div class="content">
+      <p>nested tested</p>
+    </div>
+
+  </div>
+
 </div>
 
 <footer style="text-align: center;" class="center">
